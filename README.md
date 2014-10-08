@@ -42,6 +42,10 @@ grunt.initConfig({
 });
 ```
 
+A further note is that `grunt.option('adjust_sourcemaps.' + target_name + '.sources')`
+will contain an array of all files mentioned in the processed sourcemaps (this is
+useful when trying to copy original files for deployment for easier debugging).
+
 ### Options
 
 #### options.process

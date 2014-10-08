@@ -1,7 +1,7 @@
 {
   "name": "grunt-adjust-sourcemaps",
   "description": "Adjusts sourcemaps in arbitrary ways",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/rightscale/grunt-adjust-sourcemaps",
   "author": {
     "name": "Jakub Hampl",

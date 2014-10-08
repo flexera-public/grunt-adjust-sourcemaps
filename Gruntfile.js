@@ -79,6 +79,10 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.registerTask('print:sources', function() {
+    grunt.log.ok(JSON.stringify(grunt.option('adjust_sourcemaps.json_manipulation.sources')));
+  });
+
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
@@ -89,7 +93,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'adjust_sourcemaps', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'adjust_sourcemaps', 'print:sources', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);

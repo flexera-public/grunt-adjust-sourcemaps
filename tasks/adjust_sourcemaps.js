@@ -21,6 +21,7 @@ module.exports = function(grunt) {
     });
 
     var sourceMap = require('source-map');
+    var sourcePaths = [];
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
       var src = f.src.filter(function(filepath) {
@@ -45,12 +46,16 @@ module.exports = function(grunt) {
         var result = options.process(data, sourceMapGenerator, sourceMapConsumer, sourceMap);
         if (result instanceof sourceMap.SourceMapGenerator) {
           grunt.file.write(f.dest, result.toString());
+          sourcePaths = sourcePaths.concat(JSON.parse(result.toString()).sources);
         } else {
           grunt.file.write(f.dest, JSON.stringify(result));
+          sourcePaths = sourcePaths.concat(result.sources);
         }
       });
-
     });
+    grunt.option('adjust_sourcemaps.' + this.target + '.sources', sourcePaths.filter(function(value, index, self) {
+      return self.indexOf(value) === index;
+    }));
   });
 
 };

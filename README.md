@@ -1,5 +1,7 @@
 # grunt-adjust-sourcemaps
 
+[![Build Status](https://travis-ci.org/rightscale/grunt-adjust-sourcemaps.svg?branch=master)](https://travis-ci.org/rightscale/grunt-adjust-sourcemaps)
+
 > Adjusts sourcemaps in arbitrary ways. This can be done by either directly manipulating the JSON representation or using the [Mozilla SourceMaps module](https://github.com/mozilla/source-map). The plugin finds and parses sourcemaps, allows you to do any custom manipulation and then writes the maps to a new location.
 
 ## Getting Started
@@ -66,4 +68,7 @@ The function should return either a JSON object representing the sourcemap or a 
 
 
 ## Contributing
+
+Jakub Hampl (@gampleman) is the maintainer of this repo.
+
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).

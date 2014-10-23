@@ -69,6 +69,6 @@ The function should return either a JSON object representing the sourcemap or a 
 
 ## Contributing
 
-Jakub Hampl (@gampleman) is the maintainer of this repo.
+Maintaned by Jakub Hampl (@gampleman)
 
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).

@@ -1,4 +1,12 @@
 language: node_js
 node_js:
-  - "0.10"
+  - "6.2"
 sudo: false
+deploy:
+  provider: npm
+  email: jakub.hampl@rightscale.com
+  api_key:
+    secure: DbDhJSOcipwoqKQRRdBkjHoX6DkNBgjcS1H1ObelsB9UyC0kQ88lhYam7KAxm5ORHzQd6juS3HjCzmZDj7odEhjr+ioAMi/wJSivmFJ+wk5JdIyChWOLSSt2KPMksBXhNLULFhBug4gm2U3LRBwx0Vn5aHsG70nEai3KUbeR+Zw=
+  on:
+    tags: true
+    repo: rightscale/grunt-adjust-sourcemaps
